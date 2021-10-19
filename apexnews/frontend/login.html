@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title>Login | Apex News</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+
+    <div id="login_div" class="main-div">
+        <h3>Sign-in here with your Email and Password</h3>
+        <input type="email" placeholder="Email..." id="email_field" />
+        <input type="password" placeholder="Password..." id="password_field" />
+
+        <button onclick="login()">Login to Account</button>
+    </div>
+
+    <div id="user_div" class="loggedin-div">
+        <h3>Welcome User</h3>
+        <p id="user_para">You're currently logged in.</p>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAJnYiZup9fr41QShNc3C2mpUmQrDc4D6E",
+            authDomain: "webauth-ab7b3.firebaseapp.com",
+            databaseURL: "https://fir-web-login-8b7c5.firebaseio.com",
+            projectId: "webauth-ab7b3",
+            storageBucket: "webauth-ab7b3.appspot.com",
+            messagingSenderId: "234981066575"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+    <!-- <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAJnYiZup9fr41QShNc3C2mpUmQrDc4D6E",
+      authDomain: "webauth-ab7b3.firebaseapp.com",
+      projectId: "webauth-ab7b3",
+      storageBucket: "webauth-ab7b3.appspot.com",
+      messagingSenderId: "234981066575",
+      appId: "1:234981066575:web:aaa32d1e4c933b5dcc273a",
+      measurementId: "G-392SYM8KFC"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script> -->
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>
